@@ -1,0 +1,51 @@
+\documentclass[12pt] {article}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage[flushleft]{threeparttable}
+\usepackage[format=plain, justification=raggedright,labelsep=none,singlelinecheck=false,labelsep=newline,textfont={bf, it},labelfont={bf},font={stretch=2}]{caption}
+\usepackage{hyperref}
+\usepackage{setspace}
+\usepackage{multirow,makecell}
+\doublespacing
+\title{apa tables}
+
+\author{Dan (Overleaf Support) MacKinnon}
+\date{August 2020}
+
+\begin{document}
+\maketitle
+
+%\section{Introduction}
+
+This example is adapted from \url{https://owl.purdue.edu/owl/research_and_citation/apa_style/apa_formatting_and_style_guide/apa_tables_and_figures.html}
+
+
+\begin{table}[!htb]
+    \begin{threeparttable}[b]
+   
+    \caption{Title}
+    \label{tbl:1}
+    \centering
+    \begin{tabular}{lcccc}
+        \makecell[c]{Stub \\ Heading} & \multicolumn{2}{c}{Column Spanner} & \multicolumn{2}{c}{Column Spanner}\\
+        %\addlinespace[10pt]
+        \cmidrule(lr){2-5} \\
+        {} &  \makecell[c]{Column \\ Heading} &  \makecell[c]{Column \\ Heading} &  \makecell[c]{Column \\ Heading}  & \makecell[c]{Column \\ Heading} \\
+        %\addlinespace[10pt]
+        \cmidrule(lr){1-5}
+        Row 1  & 123  & 234\tnote{a} & 456  & 789 \\
+        Row 2  & 123 & 987 & 543 & 867 \\
+         \cmidrule(lr){1-5}
+        Row 3  & 123  & 234 & 456  & 789 \\
+        Row 4  & 123 & 987 & 543 & 867 \\
+       % \bottomrule
+    \end{tabular}
+    \vspace{-10pt}
+    \begin{tablenotes}    
+    \item  \doublespacing Note. \textnormal{This is a general note, referring to information about the entire table.}
+    \item[a] Specific notes appear in a new paragraph.
+    \end{tablenotes}    
+    \end{threeparttable}
+\end{table}
+
+\end{document}
